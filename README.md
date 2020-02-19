@@ -36,7 +36,8 @@ Things you may want to cover:
 - belongs_to :group
 
 ## groups＿usersテーブル
-
+has_many :groups_users
+has_many :users, through: :groups_users
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, index|
