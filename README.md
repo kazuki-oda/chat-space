@@ -44,7 +44,8 @@ Things you may want to cover:
 - belongs_to :user
 
 ## groups_messagesテーブル
-
+has_many :groups_massages
+has_many :groups, through: :groups_messages
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true, index|
