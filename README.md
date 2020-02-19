@@ -40,12 +40,24 @@ has_many :groups_users
 has_many :users, through: :groups_users
 |Column|Type|Options|
 |------|----|-------|
+|groups_id|integer|null: false, foreign_key: true, index|
+|user_id|integer|null: false, foreign_key: true, index|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+## usersテーブル
+has_many :groups_users
+has_many :users, through: :groups_users
+|Column|Type|Options|
+|------|----|-------|
 |id|integer|null: false, index|
 |name|string|null: false|
 |user_id|integer|null: false, foreign_key: true, index|
 
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 ## groups_messagesテーブル
 has_many :groups_messages
