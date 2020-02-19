@@ -30,7 +30,7 @@ Things you may want to cover:
 |id|integer|null: false, index|
 |email|string|null: false| 
 |password|string|null: false| 
-|username|integer|null: false| 
+|username|string|null: false| 
 
 ## groupsテーブル
 
