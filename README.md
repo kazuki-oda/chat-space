@@ -44,7 +44,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true, index|
 
 ### Association
-- belongs_to :
+- belongs_to :users
 
 ## groups_messagesテーブル
 has_many :groups_messages
