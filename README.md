@@ -37,7 +37,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, index|
-|groupname|integer|null: false|
+|groupname|string|null: false|
 |user_id|integer|null: false, foreign_key: true, index|
 
 ### Association
