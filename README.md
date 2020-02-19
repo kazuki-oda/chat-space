@@ -30,18 +30,21 @@ Things you may want to cover:
 |id|integer|null: false, index|
 |email|string|null: false| 
 |password|string|null: false| 
-|username|string|null: false| 
+|name|string|null: false| 
 
-## groupsテーブル
+### Association
+- belongs_to :group
+
+## groups＿usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, index|
-|groupname|string|null: false|
+|name|string|null: false|
 |user_id|integer|null: false, foreign_key: true, index|
 
 ### Association
-- belongs_to :user
+- belongs_to :
 
 ## groups_messagesテーブル
 has_many :groups_messages
@@ -60,10 +63,10 @@ has_many :groups, through: :groups_messages
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, index|
-|body|text|null: false, index|
-|image|string|index|
-|group_id|integer|null: false, foreign_key: true, index|
-|user_id|integer|null: false, foreign_key: true, index|
+|body|text
+|image|string
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
