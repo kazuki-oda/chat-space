@@ -1,0 +1,28 @@
+.main_chat
+  .main_chat__header
+    .main_chat__header__left
+      test
+      .main_chat__header__left__member
+        %ul.main_chat__header__left__member__list 
+          Member ：
+          %li.main_chat__header__left__member__name masa
+    %a{:href => "edit"}
+      .main_chat__header__btn
+        Edit
+  .main_chat__talk
+    .main_chat__talk__post
+      .main_chat__talk__post__info
+        %p.main_chat__talk__post__info__name
+          masa
+        %p.main_chat__talk__post__info__date
+          2020/02/23(Sun) 18:00:36
+      %p.main_caht__talk__post__text
+        おはよう
+
+  .form 
+    .input-box
+      %input{type: "text", class: "input-box__text",  placeholder: "type a message", name: "message[content]", id: "message_content"}
+      %label{class: "input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "input-box__image__file"}
+    %input{type: "submit", value: "Send", class: "submit-btn"}
