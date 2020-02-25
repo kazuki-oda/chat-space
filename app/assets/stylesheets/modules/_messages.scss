@@ -36,14 +36,14 @@
         &__icon{
           height: 20px;
           display: flex;
-
-          &__comment{
-            color: #ffffff;
+          color: #ffffff;
+          .edit{
+            color: white;
             margin-right: 5px;
            }
 
-           &__set{
-             color: #ffffff;
+           .cog{
+            color: white;
            }
         } 
       }
@@ -56,18 +56,19 @@
       padding: 20px 20px 0;
 
         &__list{
-          color: #ffffff;
           padding-bottom: 40px;
           font-weight: bold;
 
           &__name{
             font-size: 15px;
             margin-bottom: 5px;
+            color: white;
           }
 
           &__message{
             height: 40px;
             font-size: 11px;
+            color: white;
           }
         }
       }
