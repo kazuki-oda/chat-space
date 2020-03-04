@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     if (message.content && message.image) {
-      var html = `<div class="message" data-message-id= message.id >
+      var html = `<div class="message" data-message-id= ${message.id} >
         <div class="upper-message"> 
           <div class="upper-message__user-name">
             ${message.user_name} 
@@ -18,7 +18,7 @@ $(function(){
         </div>
       </div>`
     } else if (message.content) {
-      var html = `<div class="message" data-message-id= message.id >
+      var html = `<div class="message" data-message-id= ${message.id} >
         <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name} 
@@ -34,7 +34,7 @@ $(function(){
         </div>
       </div>`
     } else if (message.image) {
-      var html = `<div class="message" data-message-id= message.id > 
+      var html = `<div class="message" data-message-id= ${message.id} > 
         <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name}
@@ -72,8 +72,10 @@ $(function(){
       .fail(function() {
         alert("メッセージ送信に失敗しました");
     });
+  });
     var reloadMessages = function() {
       var last_message_id = $('.message:last').data("message-id");
+      console.log(last_message_id)
       $.ajax({
         url: "api/messages",
         type: 'get',
@@ -94,7 +96,6 @@ $(function(){
         alert('error');
       });
     };
-  });
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
